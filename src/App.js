@@ -41,11 +41,13 @@ function App() {
     }
     
     let after_tax = bareme(Brut)
+    let per_month = after_tax / 12.0
     
     return (<div>
 		<input name="brut"  type="number" value={Brut} onChange={handleChange}>
 		</input>
 		<p> After tax incoming: {after_tax} </p>
+		<p> Which, per month, is: {per_month} </p>
 	    </div>);
 }
 
